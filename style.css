@@ -4,16 +4,6 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 14px;
-}
-
-@media (max-width: 600px) {
-    html {
-        font-size: 12px;
-    }
-}
-
 body {
     font-family: "Lato", sans-serif;
 }
@@ -22,8 +12,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 1em;
     background-color: rgb(230, 230, 230);
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .nav-container {
+        font-size: 12px;
+    }
 }
 
 .nav {
@@ -32,20 +29,108 @@ body {
     align-items: center;
     flex: auto;
     max-width: 720px;
-    padding: 1rem 2rem;
+    padding: 1em 2em;
     border: 2px solid rgb(200, 200, 200);
     border-radius: 100vh;
 }
 
 .logo {
     margin-right: auto;
-    max-width: 2rem;
+    max-width: 2em;
 }
 
 ul {
     display: flex;
-    gap: 2rem;
+    gap: 2em;
     list-style: none;
     color: rgb(51, 51, 51);
-    font-size: 1rem;
+    font-size: 1em;
+}
+
+.card {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 17px;
+    flex: auto;
+}
+
+.card .title {
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+}
+
+.card .body {
+    flex: auto;
+    width: 250px;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.card.noflex .title,
+.card.noflex .body {
+    color: rgb(255, 255, 255);
+}
+
+.card .end {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 600px) {
+    .card {
+        height: 400px;
+    }
+
+    .card .title {
+        font-size: 19px;
+    }
+
+    .card .body {
+        font-size: 14px;
+    }
+
+    .card .end {
+        font-size: 9px;
+    }
+}
+
+.card.flex-item {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(230, 230, 230);
+}
+
+.arcade {
+    background-image: url(./images/arcade.jpg);
+    background-size: cover;
+}
+
+.jar {
+    background-image: url(./images/jar.png);
+}
+
+.inworks {
+    background-image: url(./images/inworks.png);
+}
+
+.detour {
+    background-image: url(./images/detour.png);
+}
+
+.cwk {
+    background-image: url(./images/cwk.png);
+}
+
+.flex-container {
+    display: flex;
+}
+
+@media (max-width: 600px) {
+    .flex-container {
+        flex-wrap: wrap;
+    }
 }
