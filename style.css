@@ -63,14 +63,9 @@ ul {
 
 .card .body {
     flex: auto;
-    width: 250px;
-    font-size: 10px;
+    width: 300px;
+    font-size: 13px;
     color: rgb(0, 0, 0);
-}
-
-.card.noflex .title,
-.card.noflex .body {
-    color: rgb(255, 255, 255);
 }
 
 .card .end {
@@ -97,16 +92,59 @@ ul {
     }
 }
 
-.card.flex-item {
+.static .card.flex-item {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgb(230, 230, 230);
 }
 
+.microsoft {
+    background-image: url(./images/microsoftbg.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: initial;
+}
+
+.microsoft .title {
+    margin-bottom: 17px;
+}
+
+.microsoft .title,
+.microsoft .body {
+    color: rgb(255, 255, 255);
+}
+
+.microsoft img {
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+}
+
+.uwdesign {
+    background-image: url(./images/uwdesign.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 720px) {
+    .uwdesign {
+        background-size: contain;
+    }    
+}
+
 .arcade {
     background-image: url(./images/arcade.jpg);
     background-size: cover;
+}
+
+.arcade .title,
+.arcade .body {
+    color: rgb(255, 255, 255);
 }
 
 .jar {
@@ -129,8 +167,14 @@ ul {
     display: flex;
 }
 
-@media (max-width: 600px) {
-    .flex-container {
-        flex-wrap: wrap;
+@media (max-width: 720px) {
+    .flex-container.static {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1024px) {
+    .flex-container.gif {
+        flex-direction: column;
     }
 }
